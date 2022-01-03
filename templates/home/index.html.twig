@@ -1,0 +1,83 @@
+{% extends "base.html.twig" %}
+
+{% block carousel %}{% endblock %}
+
+{% block content %}
+<!-- Three columns of text below the carousel -->
+
+        <h3>Nos meilleures ventes</h3>
+        <p>Découvrez les produits les plus vendus.</p>
+        <div class="row">
+             {% for product in products %}
+               <div class="col-md-3">
+                  {% include "product/single_product.html.twig" %}
+               </div>   
+             {% endfor %}
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Beurre de Karité. <span class="text-muted">Extrait des fruits du Karité.</span></h2>
+                <p class="lead">Utilisé en cosmétique, il permet d'hydrater la peau en profondeur. Avec ses propriétés anti-âge, il protège aussi les cheveux du soleil et soigne les problèmes peau grâce à sa vitamine E.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ asset('assets/img/karite.jpg')}}" class="img-fluid" alt="Un beurre en douceur">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Fruit de la Passion. <span class="text-muted">Petite baie tropicale.</span></h2>
+                <p class="lead">Antioxydant, riche en vitamine C et en fer, il est bon pour la pression artérielle et a des effets rajeunissants. Il prévient aussi de l'apparition de maladies cardiovasculaires. À apprécier en cocktails</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="{{ asset('assets/img/passion.jpg')}}" class="img-fluid" alt="Vitamine C un antioxydant">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Patate douce. <span class="text-muted">Tubercule.</span></h2>
+                <p class="lead">Riche en vitamine A, B6, B9, C et en béta-carotène, c'est un très bon antioxydant. Elle peut être consommée sous forme de frites, en purée, en gratin et cuite au four.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ asset('assets/img/patate.jpg')}}" class="img-fluid" alt="Une purée de patate">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Jus d'Ananas. <span class="text-muted">À chair blanche, aussi appelé ananas bouteille.</span></h2>
+                <p class="lead">Jus d'un fruit exotique très riche en fibres, il favorise la circulation sanguine, diminue les risques de maladies cardio-vasculaires.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ asset('assets/img/ananas.jpg')}}" class="img-fluid" alt="Un beurre en douceur">
+            </div>
+        </div> <br>
+
+        <!-- /END THE FEATURETTES -->
+
+
+        <hr>
+
+        <h3>Nos meilleures ventes</h3>
+        <p>Découvrez les produits les plus vendus.</p>
+        <div class="row">
+             {% for product in products %}
+               <div class="col-md-3">
+                  {% include "product/single_product.html.twig" %}
+               </div>   
+             {% endfor %}
+        </div><!-- /.row -->
+{% endblock %}
