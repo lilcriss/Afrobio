@@ -16,11 +16,4 @@ class Search
      * @var Category[]
      */
     public $categories = [];
-
-    public function setString(string $string): self
-    {
-        $this->string = $string;
-
-        return $this;
-    }
 }
